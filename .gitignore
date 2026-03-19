@@ -1,0 +1,32 @@
+# Environment
+.env
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Folders
+temp/
+logs/
+venv/
+env/
+.venv
+
+# Firebase
+config/firebase-credentials.json
+firebase-credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
