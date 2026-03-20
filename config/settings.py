@@ -12,7 +12,10 @@ class Settings:
     BOT_TOKEN = os.getenv('BOT_TOKEN')
     
     # Firebase Configuration
-    FIREBASE_CREDENTIALS_PATH = os.getenv('FIREBASE_CREDENTIALS_PATH', './config/firebase-credentials.json')
+    if os.getenv('RENDER'):
+        FIREBASE_CREDENTIALS_PATH = os.getenv('FIREBASE_CREDENTIALS_PATH', '/etc/secrets/firebase_credentials.json')
+    else:
+        FIREBASE_CREDENTIALS_PATH = os.getenv('FIREBASE_CREDENTIALS_PATH', './config/firebase-credentials.json')
     
     # File Configuration
     MAX_FILE_SIZE_MB = int(os.getenv('MAX_FILE_SIZE_MB', 50))
